@@ -11,9 +11,9 @@ For installing jekyll open the terminal and run: (omit the $ sign)
 
 Once jekyll is installed clone this repo:
 
-`
+```
 $ git clone https://github.com/inaki/egyptian-protesters
 $ cd egyptian-protesters
 $ jekyll server
-`
+```
 
