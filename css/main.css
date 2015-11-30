@@ -9,3 +9,16 @@
 #chart .c3-line-Group-Three {
   stroke-width: 2px;
 }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
