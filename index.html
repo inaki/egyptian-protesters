@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="egyptApp">
+  <head>
+  	<meta charset="UTF-8">
+  	<title>Protests App</title>
+    
+    <script src="bower_components/angular/angular.min.js"></script>
+
+    <script src="js/tabletop.js"></script>
+    <script src="bower_components/angular-tabletop/TabletopProvider.js"></script>
+
+    <script src="js/app.js"></script>
+    
+  </head>
+  <body ng-controller="mainCtrl">
+    <!-- <ul>
+      <li ng-repeat="item in byMonth.April">{{item.GroupName}}</li>
+    </ul>   -->  
+    <h2>Protests in a month</h2>
+    <table>
+      <tr>
+        <th>months</th>
+        <th>amount</th>
+        <th>attacked</th>
+        <th>groups</th>
+        <th>try</th>
+      </tr>
+      <tr ng-repeat="protests in byMonth">
+        <td>{{months[protests[0].Month]}}</td>
+        <td>{{protests.length}}</td>
+        <td>{{protests[0].Attacked}}</td>
+        <td> <span ng-repeat="p in protests | orderBy:'GroupName' | unique:'GroupName' ">{{p.GroupName}}, </span> </td>
+        <td> <span ng-repeat="p in protests | filter : 'TRUE' : true">{{ getCount(p.Attacked) }} </span></td>
+        </tr>
+      </tr>
+    </table>
+
+
+  </body>
+</html>
